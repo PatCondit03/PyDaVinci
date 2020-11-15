@@ -30,7 +30,7 @@ while x > 0:
     x = x-1
     time.sleep(1)
 print('Painting started')
-
+###################### CHANGE
 try:
     # Painting types: Oil, crayon simple
     
