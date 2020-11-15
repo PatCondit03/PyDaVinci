@@ -226,4 +226,4 @@ def cut_and_paste(canvas_width, canvas_height):
     gui.click(a, b)
     gui.dragRel(a, b)
 
-    
+
