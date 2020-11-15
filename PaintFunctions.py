@@ -165,9 +165,17 @@ def horizontalLine(current_colors_xy, canvas_width, canvas_height):
     name, (place,  row) = r.choice(list(current_colors_xy.items()))
     gui.click(place, row, 2, 0.2)
     # ^^ choose a color
-    a, b = canvas_height
-    gui.click(r.randint(0,canvas_width),r.randint(a, b))
-    gui.dragRel(r.randint(-300,300), 0)
+    ## added the two variables and loops below to ensure that the lines being drawn are long enough to look decent
+    length = r.randint(-600,600)
+    cont = True
+    while cont is True:
+        if length>200 or length<-200:
+            a, b = canvas_height
+            gui.click(r.randint(0,canvas_width),r.randint(a, b))
+            gui.dragRel(length, 0)
+            cont = False
+        else:
+            length = r.randint(-600,600)
     
     
     
@@ -177,9 +185,17 @@ def verticalLine(current_colors_xy, canvas_width, canvas_height):
     name, (place,  row) = r.choice(list(current_colors_xy.items()))
     gui.click(place, row, 2, 0.2)
     # ^^ choose a color
-    a, b = canvas_height
-    gui.click(r.randint(0,canvas_width),r.randint(a, b))
-    gui.dragRel(0, r.randint(-300,300))
+    ## added the two variables and loops below to ensure that the lines being drawn are long enough to look decent
+    length = r.randint(-600,600)
+    cont = True
+    while cont is True:
+        if length>200 or length<-200:
+            a, b = canvas_height
+            gui.click(r.randint(0,canvas_width),r.randint(a, b))
+            gui.dragRel(0, length)
+            cont = False
+        else:
+            length = r.randint(-600,600)
     
     
     
